@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		div { border-bottom: 1px solid silver; padding: 10px; margin:10px; }
+		h3 { color: #900; font-size: 12pt; font-weight: normal; }
+		p { font-size: 12pt; font-stile: italic; }
+	</style>
+</head>
+<body>
+
+<div>	
+	<h3>&lt;img src=&quot;my-coffee-cup.jpg@area,300,200&quot;&gt;</h3>
+	<p> resize image with keeping original aspect ratio for area 300x200 px</p> 
+	<img src="images/my-coffee-cup.jpg@area,300,200">
+</div>
+<div>	
+	<h3>&lt;img src=&quot;my-coffee-cup.jpg@resize,160,90&quot;&gt;</h3>
+	<p> resize image to 160x90 px, doesn't care aspect ratio</p> 
+	<img src="images/my-coffee-cup.jpg@resize,160,90">
+</div>
+<div>	
+	<h3>&lt;img src=&quot;my-coffee-cup.jpg@crop,80,120&quot;&gt;</h3>
+	<p>crop image with maximum space for area 80x120 with keeping aspect ratio</p> 
+	<img src="images/my-coffee-cup.jpg@crop,80,120">
+</div>
+<div>	
+	<h3>&lt;img src=&quot;my-coffee-cup.jpg@protect,0,0,50,50@crop,80,120&quot;&gt;</h3>
+	<p>protect area between %0x%0 and %50x%50 then crop image with maximum space for area 80x120  with keeping aspect ratio</p> 
+	<img src="images/my-coffee-cup.jpg@protect,0,0,50,50@crop,80,120">
+</div>
+<div>	
+	<h3>&lt;img src=&quot;my-coffee-cup.jpg@protect,50,50,100,100@crop,80,120&quot;&gt;</h3>
+	<p>protect area between %50x%50 and %100x%100 then crop image with maximum space for area 80x120 with keeping aspect ratio</p> 
+	<img src="images/my-coffee-cup.jpg@protect,50,50,100,100@crop,80,120">
+</div>
+
+</body>
+</html>
