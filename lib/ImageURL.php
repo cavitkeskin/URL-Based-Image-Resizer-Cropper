@@ -1,16 +1,21 @@
 <?	
-	/*
-		Author: Cavit Keskin
-				
-		
-	*/
-
+/* 
+#
+#	ImageURL Object
+#	
+#		URL / Script Based Image Resizer, Cropper
+#
+#	Copyright 2002-2012, Cavit Keskin, http://www.binbir.net
+#
+#	Licensed under The MIT License
+#
+*/
 
 interface IImageURL
 {
 	public function __construct($url);
-	public function loadImage($filename);
-	public function execScript($script);
+	public function load($filename);
+	public function apply($script);
 	public function get($autosave=true);
 	public function save($filename=null);
 }
@@ -25,10 +30,9 @@ abstract class AImageURL implements IImageURL
 		
 	public function __construct($url)
 	{
-		error_log( 'ImageURL Class called for ' . $url );
 		$ar=explode('@', $url);
-		if( $this->loadImage( array_shift($ar) ))
-			while($script=array_shift($ar)) $this->execScript($script);
+		if( $this->load( array_shift($ar) ))
+			while($script=array_shift($ar)) $this->apply($script);
 	}
 	
 	protected function fileExists($file)
@@ -36,7 +40,7 @@ abstract class AImageURL implements IImageURL
 		return file_exists($file);
 	}	
 	
-	public function loadImage($file)
+	public function load($file)
 	{
 
 		$this->FileName = '';	
@@ -65,7 +69,7 @@ abstract class AImageURL implements IImageURL
 		return $this->Canvas;	
 	}	
 	
-	public function execScript($script)
+	public function apply($script)
 	{
 		$key=explode(',', $script);
 		switch($key[0])
