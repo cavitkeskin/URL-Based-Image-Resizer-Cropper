@@ -1,10 +1,10 @@
 URL / Script Based Image Resizer, Cropper
-
+=========================================
 
 You can use like below
 
 	$img = new ImageURL('my-coffe-cup.jpg');
-	$img->execScript('crop,160,90');
+	$img->apply('crop,160,90');
 	$img->save('my-small-sized-coffee-cup.jpg');
 	
 or 
