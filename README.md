@@ -7,20 +7,29 @@ You can use like below
 	$img->apply('crop,160,90');
 	$img->save('my-small-sized-coffee-cup.jpg');
 	
-or 
+**or** 
 
 	$img = new ImageURL('my-coffe-cup.jpg@crop,160,90');
 	$img->save();  
 		
-or (it is my first reason for writing this class)
-
-	put .htaccess file under /images folder your web site and make sure about RewriteRule URL is correct.
-
-	and try to reach blow url 
+**or**  _( it is my first reason for writing this class )_
+	
+> put .htaccess file under /images folder your web site and make sure about RewriteRule URL is correct then try to reach blow url 
 		
-		/images/my-coffe-cup.jpg@crop,160,90
+	/images/my-coffe-cup.jpg@crop,160,90
 	
+
+Possibles Script
+----------------
+* area,240,180
+* resize,160,90
+* crop,160,160
+* protect,40,30,70,60
+
+	use like that
 	
+		&lt;img src="my-coffee-cup.jpg@protect,40,30,70,60@crop,160,160"&gt;
+
 
 Have fun
 
