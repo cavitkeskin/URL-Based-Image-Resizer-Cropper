@@ -14,21 +14,22 @@ You can use like below
 		
 **or**  _( it is my first reason for writing this class )_
 	
-> put .htaccess file under /images folder your web site and make sure about RewriteRule URL is correct then try to reach blow url 
+put .htaccess file under /images folder your web site and make sure about RewriteRule URL is correct then try to reach blow url 
 		
 	/images/my-coffe-cup.jpg@crop,160,90
 	
 
-Possibles Script
+Possibles Scripts
 ----------------
-* area,240,180
-* resize,160,90
-* crop,160,160
-* protect,40,30,70,60
+- area,240,180
+- protect,40,30,70,60 
+- crop,160,160
+- resize,160,90
+ 
 
-	use like that
+you can use below url to reach image 
 	
-		&lt;img src="my-coffee-cup.jpg@protect,40,30,70,60@crop,160,160"&gt;
+	/images/my-coffee-cup.jpg@protect,40,30,70,60@crop,160,160
 
 
 Have fun
